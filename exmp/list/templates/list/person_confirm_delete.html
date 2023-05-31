@@ -1,0 +1,10 @@
+{% extends 'list/base.html' %}
+
+{% block content %}
+  <h1>Delete Person</h1>
+  <p>Are you sure you want to delete "{{ person }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+  </form>
+{% endblock %}
